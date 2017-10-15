@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lab2</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.shuru2{float: right;
+			height: 50px;
+			width: 180px;
+		text-align: right;}
+		input{height: 50px;
+			width: 50px;
+		}
+	</style>
+	<script type="text/javascript">
+	var result;
+		function clear2()
+		{
+			document.getElementById('xians').value=0;
+		}
+			function yuns0()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10;
+	
+		}
+		function yuns1()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+1
+	
+		}
+		function yuns2()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+2;
+	
+		}
+		function yuns3()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+3;
+	
+		}
+		function yuns4()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+4;
+	
+		}
+		function yuns5()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+5;
+	
+		}
+		function yuns6()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+6;
+	
+		}
+		function yuns7()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+7;
+	
+		}
+		function yuns8()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+8;
+	
+		}
+		function yuns9()
+		{
+			var shu=document.getElementById('xians').value;
+			document.getElementById('xians').value=shu*10+9;
+	
+		}
+			function yunsjia()
+		{
+			var shu=document.getElementById('xians').value;
+			result=shu+'+';
+			clear2();
+
+	
+		}
+			function yunsjian()
+		{
+			var shu=document.getElementById('xians').value;
+			result=shu+'-';
+			clear2();
+
+	
+		}
+			function yunscheng()
+		{
+			var shu=document.getElementById('xians').value;
+			result=shu+'*';
+			clear2();
+		}
+			function yunschu()
+		{
+			var shu=document.getElementById('xians').value;
+			result=shu+'/';
+			clear2();
+		}
+		
+			function yunsdian()
+		{
+			
+	
+		}
+		function yunsdeng(){
+		var shu=document.getElementById('xians').value;
+		var jias=(result)+(shu); 
+		var rss=result.length-1;
+
+		var rresult=result.substring(0,rss);
+		var fhs=jias.indexOf('+');
+		if (fhs>-1)
+				 {var shu=document.getElementById('xians').value;
+					rresult=parseInt(rresult)+parseInt(shu);  
+					
+					document.getElementById('xians').value=rresult;
+					}
+		fhs=jias.indexOf('-');
+			if(fhs>(-1))
+				{
+					var shu=document.getElementById('xians').value;
+					
+				
+				rresult=parseInt(result)-parseInt(shu);  
+				
+				document.getElementById('xians').value=rresult;
+				}
+		fhs=jias.indexOf('*');
+			if(fhs>(-1))
+				{
+				var shu=document.getElementById('xians').value;
+				rresult=parseInt(rresult) * parseInt(shu);  
+				
+				document.getElementById('xians').value=rresult;
+				}
+		fhs=jias.indexOf('/');
+			if(fhs>(-1))
+				{
+					var shu=document.getElementById('xians').value;
+				rresult=parseInt(rresult)/parseInt(shu);  
+				
+				document.getElementById('xians').value=rresult;
+				}
+		rresult=0;
+		result=0;
+	}	
+	</script>
+</head>
+<body>
+	<table border="1" cellpadding="10" cellspacing="5">
+		<tr>
+			<td colspan="3"><input class="shuru2" type="text" name="" id="xians"></td>
+			<td><input type="button" name="clear" value="清除" onclick="clear2()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="1" value="1" onclick="yuns1()"></td>
+			<td><input type="button" name="2" value="2" onclick="yuns2()"></td>
+			<td><input type="button" name="3" value="3" onclick="yuns3()"></td>
+			<td><input type="button" name="+" value="+" onclick="yunsjia()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="4" value="4" onclick="yuns4()"></td>
+			<td><input type="button" name="5" value="5" onclick="yuns5()"></td>
+			<td><input type="button" name="6" value="6" onclick="yuns6()"></td>
+			<td><input type="button" name="-" value="-" onclick="yunsjian()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="7" value="7" onclick="yuns7()"></td>
+			<td><input type="button" name="8" value="8" onclick="yuns8()"></td>
+			<td><input type="button" name="9" value="9" onclick="yuns9()"></td>
+			<td><input type="button" name="*" value="*" onclick="yunscheng()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="0" value="0" onclick="yuns0()"></td>
+			<td><input type="button" name="." value="." onclick="yunsd()"></td>
+			<td><input type="button" name="=" value="=" onclick="yunsdeng()"></td>
+			<td><input type="button" name="/" value="/" onclick="yunschu()"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
